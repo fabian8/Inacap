@@ -15,6 +15,7 @@ class Ciudad_model extends CI_Model{
     public function save($nombre){
         $this->db->query("insert into Ciudad(nombre) values ('".$nombre."')");
         $this->db->close();
+        redirect('ciudad/index');
     }
     public function borrar($ciudad_id){
         $this->db->query("delete from Ciudad where ciudad_id='".$ciudad_id."'");
